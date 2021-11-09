@@ -1,0 +1,18 @@
+<!-- General site navigation -->
+<!--
+<nav class="general">
+    <a href="connections.html">Connections</a>
+</nav>
+-->
+<section class="menubar">
+    <article class="general-info">
+        <nav class="general">
+            <a href="/connections">Connections</a>
+        </nav>
+    </article>
+    <article class="general-info" id="user-name">
+        <% if (typeof user != 'undefined') { %>
+        <h3>Welcome, <%= user.fName %>!</h3>
+        <% } %>
+    </article>
+</section>

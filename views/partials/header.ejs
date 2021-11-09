@@ -1,0 +1,14 @@
+<header>
+    <a href="/index"><img class="banner-logo" src="/assets/images/banner-logo.jpg" alt="banner-logo"></a>
+    <h1>Dodo Trade Center</h1>
+    <!-- User specific navigation-->
+    <nav>
+        <% if (typeof user != 'undefined') { %>
+            <a class="user-link" href="/newConnection">Start a new connection</a> ||
+            <a class="user-link" href="/profile?action=signout">Sign Out</a> ||
+        <% } else { %>
+            <a class="user-link" href="/profile?action=login">Login</a> ||
+            <a class="user-link" href="/index">Sign Up</a>
+        <% } %>
+    </nav>
+</header>

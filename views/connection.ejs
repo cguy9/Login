@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connection</title>
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+<!-- Header -->
+<%- include('partials/header.ejs') %>
+
+<!-- General site navigation -->
+<%- include('partials/navigation.ejs') %>
+
+<!-- Main content -->
+<main>
+    <section class="content">
+        <h2><%=connect[0].name%></h2>
+        <article class="child">
+            <img class="profile" src="../assets/images/marshall.jpg" alt="profile">
+        </article>
+        <article class="child">
+            <table class="event-details">
+                <tr>
+                    <td>Hosted By:</td>
+                    <td><%=host%></td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><%=connect[0].date%></td>
+                </tr>
+                <tr>
+                    <td>Time:</td>
+                    <td><%=connect[0].time%></td>
+                </tr>
+            </table>
+        </article>
+        <article class="child" id="register-container">
+            <p>Would you like to register for this event?</p>
+            <form action="/profile" method="post">
+                <input type = "hidden" name = "connectionID" value = "<%=connect[0].connectionID%>">
+
+                <input type="submit" class="yes" name="rsvp" value="Yes">
+                <input type="submit" class="no" name="rsvp" value="No">
+                <input type="submit" class="maybe" name="rsvp" value="Maybe">
+
+                <input type="hidden" name="action" value="rsvp">
+            </form>
+        </article>
+        <h3>About</h3>
+        <p><%=connect[0].details%></p>
+
+    </section>
+</main>
+<!-- Footer -->
+<%- include('partials/footer.ejs') %>
+</body>
+</html>

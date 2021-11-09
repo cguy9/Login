@@ -1,0 +1,174 @@
+/* main stylesheet for each page */
+
+* {
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+    background-color: #fff785;
+}
+
+header {
+    background-color: #0091CF;
+    padding: 5pt;
+}
+.banner-logo {
+    width: 60px;
+    position: absolute;
+    margin-right: 0px;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+header h1 {
+    color: #fffffa;
+    padding-left: 120px;
+    padding-top: 20px;
+}
+header nav {
+    color: cornsilk;
+    text-align: right;
+    padding-right: 75px;
+    padding-bottom: 20px;
+
+}
+header a.user-link {
+    color: #2E2F2F;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+nav.general {
+    background-color: #00d776;
+    padding-left: 75px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+nav.general a {
+    color: #2E2F2F;
+}
+
+main {
+    min-height: 500px;
+}
+
+section.content {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+section .content p{
+    color: black;
+}
+
+footer {
+    background-color: #0091CF;
+    color: cornsilk;
+    height: 100px;
+
+}
+footer a {
+    color: white;
+    padding-right: 20px;
+}
+section.footer-links {
+    padding-top: 30px;
+    padding-left: 75px;
+}
+
+section.event-list {
+    padding-left: 50px;
+}
+
+ul.event-list {
+    list-style-type: none;
+}
+
+article.child {
+    display: inline-block;
+}
+
+#register-container {
+    margin-left: 200px;
+    position: absolute;
+    margin-top: 100px;
+}
+
+.yes {
+    background-color: green;
+    color: white;
+    border-block-color: green;
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    /*margin-right: 100px;*/
+    margin-left: 50px;
+}
+.no {
+    background-color: red;
+    color: white;
+    border-block-color: red;
+    width: 50px;
+    height: 50px;
+    border-style: none;
+}
+
+.maybe {
+    background-color: dodgerblue;
+    color: white;
+    border-block-color: dodgerblue;
+    width: 50px;
+    height: 50px;
+    border-style: none;
+}
+
+table.user-events th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+table.user-events td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    padding-left: 15px;
+}
+
+table.user-events{
+    width: 100%;
+    border-spacing: 0px;
+    border: 1.5px solid black;
+}
+.update, .delete {
+    background-color: black;
+    color: white;
+    border-block-color: black;
+    border-style: none;
+    alignment: center;
+}
+.buttons {
+    text-align: center;
+    padding-left: 0px;
+}
+
+.general-info h3 {
+    color: darkgreen;
+}
+.general-info {
+    display: inline-block;
+}
+
+.menubar {
+    background-color: #00d776;
+}
+#user-name {
+    margin-left: 1000px;
+}
+
+.profile {
+    max-width: 200px;
+}

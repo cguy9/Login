@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saved Connections</title>
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+<!-- Header -->
+<%- include('partials/header.ejs') %>
+
+<!-- General site navigation -->
+<%- include('partials/navigation.ejs') %>
+
+<!-- Main content -->
+<main>
+    <section class="content">
+        <h3><%=user.fName%>'s Registered Events</h3>
+        <table class="user-events">
+            <tr>
+                <th>Event</th>
+                <th>Category</th>
+                <th>Attending?</th>
+                <th></th>
+            </tr>
+            <% for (con in connect) { %>
+                <tr>
+                    <td> <%= connect[con].connection.name %> </td>
+                    <td> <%= connect[con].connection.topic %> </td>
+                    <td> <%= connect[con].rsvp %> </td>
+                    <td class="buttons">
+                        <form action="/profile" method="post">
+                            <input type = "hidden" name = "connectionID" value = "<%= connect[con].connection.connectionID %>">
+                            <% for (con in connect) { %>
+                                <input type = "hidden" name = "connectionList" value = "<%= connect[con].connection.connectionID %>">
+                            <% } %>
+                            <input type="submit" class="update" name="action" value="Update">
+                            <input type="submit" class="delete" name="action" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+
+    </section>
+</main>
+<!-- Footer -->
+<%- include('partials/footer.ejs') %>
+</body>
+</html>

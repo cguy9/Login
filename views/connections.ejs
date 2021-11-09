@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connections</title>
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+<!-- Header -->
+<%- include('partials/header.ejs') %>
+
+<!-- General site navigation -->
+<%- include('partials/navigation.ejs') %>
+
+<!-- Main content -->
+<main>
+    <section class="content">
+        <h2>Upcoming events!</h2>
+        <section class="event-list">
+            <h3>Item Trading</h3>
+            <section class="event-links">
+                <ul class="event-list">
+                    <% for (var i = 0; i < connect.length; i++) { %>
+                        <% if (connect[i].topic == "Item Trading") {%>
+                            <li>
+                                <a methods="GET" href="/connection/<%= connect[i].connectionID%>"><%=connect[i].name%></a>
+                            </li>
+                        <% } %>
+                    <% } %>
+                </ul>
+            </section>
+            <h3>HHA Showoff</h3>
+            <section class="event-links">
+                <ul class="event-list">
+                    <% for (var i = 0; i < connect.length; i++) { %>
+                        <% if (connect[i].topic == "HHA Showoff") {%>
+                            <li>
+                                <a methods="GET" href="/connection/<%= connect[i].connectionID%>"><%=connect[i].name%></a>
+                            </li>
+                        <% } %>
+                    <% } %>
+                </ul>
+            </section>
+        </section>
+    </section>
+</main>
+<!-- Footer -->
+<%- include('partials/footer.ejs') %>
+</body>
+</html>

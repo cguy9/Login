@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Connection</title>
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+<!-- Header -->
+<%- include('partials/header.ejs') %>
+
+<!-- General site navigation -->
+<%- include('partials/navigation.ejs') %>
+
+<!-- Main content -->
+<main>
+    <section class="content">
+        <h1>Create A new Connection</h1>
+        <form id="contact-form" form action="/profile" method="post">
+            <label for="topic">Topic</label>
+            <input type="text" name="topic">
+            <br><br>
+            <label for="name">Name</label>
+            <input type="text" name="name">
+            <br><br>
+            <label for="details">Details</label>
+            <textarea name="details" form="contact-form">Enter a description of your event...</textarea>
+            <br><br>
+            <label for="date">Date</label>
+            <input type="date" name="date">
+            <br><br>
+            <label for="time">Time</label>
+            <input type="time" name="time">
+            <br><br>
+
+            <input type="hidden" name="hostid" value="<%= user.id %>">
+
+            <input type="submit" name="action" value="Create" >
+        </form>
+    </section>
+</main>
+<!-- Footer -->
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>
